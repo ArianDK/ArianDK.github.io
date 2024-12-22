@@ -190,13 +190,13 @@
                 </div>
             </div>
             <div class="col">
-                <form class="form-control" action="assets/php/send_email.php" method="POST">
+                <form id="contact-form">
                     <div class="form-inputs">
-                        <input type="text" class="input-field" name="name" placeholder="Name" required>
-                        <input type="email" class="input-field" name="email" placeholder="Email" required>
+                        <input type="text" id="name" class="input-field" name="name" placeholder="Name" required>
+                        <input type="email" id="email" class="input-field" name="email" placeholder="Email" required>
                     </div>
                     <div class="text-area">
-                        <textarea name="message" placeholder="Message" required></textarea>
+                        <textarea id="message" name="message" placeholder="Message" required></textarea>
                     </div>
                     <div class="form-button">
                         <button type="submit" class="btn">Send <i class="uil uil-message"></i></button>
@@ -205,7 +205,7 @@
             </div>
         </div>
     </section>
-
+    
     </main>
 
 
@@ -261,3 +261,35 @@
     <script src="assets/js/main.js"></script>
 </body>
 </html>
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
+<script>
+    (function() {
+        emailjs.init("u_h_-0AnJzooMm2vE"); // Replace with your EmailJS public key
+    })();
+
+    document.getElementById("contact-form").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        // Collect form data
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const message = document.getElementById("message").value;
+
+        // Prepare the EmailJS payload
+        const templateParams = {
+            name: name,
+            email: email,
+            message: message,
+        };
+
+        // Send the email using EmailJS
+        emailjs.send("service_s68r8cx", "template_6merm5h", templateParams)
+            .then(function(response) {
+                alert("Message sent successfully!");
+            }, function(error) {
+                alert("Failed to send message. Please try again later.");
+                console.error("EmailJS error:", error);
+            });
+    });
+</script>
