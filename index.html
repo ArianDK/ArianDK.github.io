@@ -12,15 +12,15 @@
 
     <!-- --------- FAVICON ---------- -->
     <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
-
     <title>ArianDK</title>
 </head>
 <body>
    <div class="container">
+
     <!-- --------------- HEADER --------------- -->
       <nav id="header">
         <div class="nav-logo">
-            <!-- <p class="nav-name">Arian</p> -->
+        <!-- <p class="nav-name">Arian</p> -->
         </div>
         <div class="nav-menu" id="myNavMenu">
             <ul class="nav_menu_list">
@@ -50,9 +50,9 @@
         </div>
       </nav>
 
-
     <!-- -------------- MAIN ---------------- -->
     <main class="wrapper">
+
        <!-- -------------- FEATURED BOX ---------------- -->
        <section class="featured-box" id="home">
           <div class="featured-text">
@@ -97,8 +97,8 @@
             </a>
           </div>
           -->
-
        </section>
+
        <!-- -------------- ABOUT BOX ---------------- -->
        <section class="section" id="about">
           <div class="top-header">
@@ -151,7 +151,6 @@
        </section>
 
        <!-- -------------- PROJECT BOX ---------------- -->
-
        <section class="section" id="projects">
           <div class="top-header">
               <h1>Projects</h1>
@@ -175,39 +174,38 @@
           </div>
        </section>
 
-       <!-- -------------- CONTACT BOX ---------------- -->
-
-       <section class="section" id="contact">
-        <div class="top-header">
-            <h1>Get in touch</h1>
-            <span>Do you have a project in your mind? Contact me here</span>
-        </div>
-        <div class="row">
-            <div class="col">
-                <div class="contact-info">
-                    <h2>Find Me <i class="uil uil-corner-right-down"></i></h2>
-                    <p><i class="uil uil-envelope"></i> Email: ariandk05@gmail.com</p>
+        <!-- -------------- CONTACT BOX ---------------- -->
+        <section class="section" id="contact">
+            <div class="top-header">
+                <h1>Get in touch</h1>
+                <span>Do you have a project in your mind? Contact me here</span>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="contact-info">
+                        <h2>Find Me <i class="uil uil-corner-right-down"></i></h2>
+                        <p><i class="uil uil-envelope"></i> Email: ariandk05@gmail.com</p>
+                    </div>
+                </div>
+                
+                <div class="col">
+                    <!-- Action URL and Formspree Form -->
+                    <form id="contact-form" class="form-control" action="https://formspree.io/f/xkggnged" method="POST">
+                        <div class="form-inputs">
+                            <input type="text" class="input-field" name="name" placeholder="Name" required>
+                            <input type="email" class="input-field" name="email" placeholder="Email" required>
+                        </div>
+                        <div class="text-area">
+                            <textarea name="message" placeholder="Message" required></textarea>
+                        </div>
+                        <div class="form-button">
+                            <button type="submit" class="btn">Send <i class="uil uil-message"></i></button>
+                        </div>
+                    </form>
                 </div>
             </div>
-            <div class="col">
-                <form id="contact-form">
-                    <div class="form-inputs">
-                        <input type="text" id="name" class="input-field" name="name" placeholder="Name" required>
-                        <input type="email" id="email" class="input-field" name="email" placeholder="Email" required>
-                    </div>
-                    <div class="text-area">
-                        <textarea id="message" name="message" placeholder="Message" required></textarea>
-                    </div>
-                    <div class="form-button">
-                        <button type="submit" class="btn">Send <i class="uil uil-message"></i></button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </section>
-    
+        </section>
     </main>
-
 
     <!-- --------------- FOOTER --------------- -->
     <footer>
@@ -245,11 +243,7 @@
             <p>Copyright &copy; <a href="#home" style="text-decoration: none;">Arian Din-Kirkebo</a> - All rights reserved</p>
         </div>
     </footer>
-
     </div>
-
-
-
 
     <!-- ----- TYPING JS Link ----- -->
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
@@ -261,35 +255,3 @@
     <script src="assets/js/main.js"></script>
 </body>
 </html>
-
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
-<script>
-    (function() {
-        emailjs.init("u_h_-0AnJzooMm2vE"); // Replace with your EmailJS public key
-    })();
-
-    document.getElementById("contact-form").addEventListener("submit", function(event) {
-        event.preventDefault(); // Prevent the default form submission
-
-        // Collect form data
-        const name = document.getElementById("name").value;
-        const email = document.getElementById("email").value;
-        const message = document.getElementById("message").value;
-
-        // Prepare the EmailJS payload
-        const templateParams = {
-            name: name,
-            email: email,
-            message: message,
-        };
-
-        // Send the email using EmailJS
-        emailjs.send("service_s68r8cx", "template_6merm5h", templateParams)
-            .then(function(response) {
-                alert("Message sent successfully!");
-            }, function(error) {
-                alert("Failed to send message. Please try again later.");
-                console.error("EmailJS error:", error);
-            });
-    });
-</script>
