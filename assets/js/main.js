@@ -88,6 +88,26 @@ reset: true
 srRight.reveal('.skills-box',{delay: 100})
 srRight.reveal('.form-control',{delay: 100})
 
+/* -- SECTION TOGGLE FUNCTION -- */
+function showSection(sectionId) {
+  const sections = document.querySelectorAll('.content-section');
+  sections.forEach(section => {
+      section.style.opacity = '0';
+      section.style.transform = 'translateY(20px)';
+      setTimeout(() => {
+          section.style.display = section.id === sectionId ? 'block' : 'none';
+          if (section.id === sectionId) {
+              setTimeout(() => {
+                  section.style.opacity = '1';
+                  section.style.transform = 'translateY(0)';
+              }, 50);
+          }
+      }, 300);
+  });
+
+  document.getElementById('projects-title').classList.toggle('active', sectionId === 'projects');
+  document.getElementById('certifications-title').classList.toggle('active', sectionId === 'certifications');
+}
 
 
 /* ----- CHANGE ACTIVE LINK ----- */
@@ -115,3 +135,4 @@ sections.forEach(current =>{
 }
 
 window.addEventListener('scroll', scrollActive)
+
