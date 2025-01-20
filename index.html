@@ -151,30 +151,52 @@
           </div>
        </section>
 
-       <!-- -------------- PROJECT BOX ---------------- -->
-       <section class="section" id="projects">
-          <div class="top-header">
-              <h1>Projects</h1>
-          </div>
-          <div class="project-container">
-            <div class="project-box">
-                <i class="uil uil-briefcase-alt"></i>
-                <h3>Completed Projects</h3>
-                <label>You can find all my projects on Github</label>
-            </div>
-            <div class="project-box">
-                <i class="uil uil-users-alt"></i>
-                <h3>Colaberative</h3>
-                <label>I work well with others</label>
-            </div>
-            <div class="project-box">
-                <i class="uil uil-award"></i>
-                <h3>Experience</h3>
-                <label>4 Years of computer science in school</label>
-            </div>
-          </div>
-       </section>
+    <!-- -------------- PROJECT & CERTIFICATIONS TOGGLE ---------------- -->
+    <section class="section" id="projects">
+        <div class="top-header">
+            <h1 class="section-title active" id="projects-title" onclick="showSection('projects')">Projects</h1>
+            <h1 class="section-title" id="certifications-title" onclick="showSection('certifications')">Certifications</h1>
+        </div>
+    </section>
+    <!-- -------------- PROJECT BOX ---------------- -->
+    <article class="content-section" id="projects">
+       <div class="project-container">
+        <div class="project-box" 
+        onclick="window.open('https://github.com/ArianDK/real-time-currency-converter', '_blank')" style="cursor: pointer;">
+            <i class="uil uil-dollar-alt"></i>
+            <h3>Real-Time Currency Converter</h3>
+            <p>A Python-based currency converter with a modern GUI built using ttkbootstrap. 
+               Features include real-time exchange rates, dynamic updates, a convenient currency swap button, 
+               and a responsive, user-friendly design.</p>
+        </div>
+         <div class="project-box" 
+         onclick="window.open('https://github.com/ArianDK/video-downloader', '_blank')" style="cursor: pointer;">
+             <i class="uil uil-video"></i>
+             <h3>Video Downloader</h3>
+             <p>A Python application with a modern GUI interface. 
+                It is made for downloading videos mainly from YouTube and Instagram and save them as .mp4 files.</p>
+         </div>
+         <div class="project-box" 
+         onclick="window.open('https://github.com/ArianDK/password-generator', '_blank')" style="cursor: pointer;">
+             <i class="uil uil-lock-alt"></i>
+             <h3>Password Generator</h3>
+             <p>A Python-based password generator with an intuitive GUI that allows 
+                users to create secure and customizable passwords. Built with flexibility in mind, 
+                the tool offers predefined modes and a custom mode for full user control.</p>
+         </div>
+       </div>
+    </article>
 
+    <!-- -------------- CERTIFICATIONS BOX ---------------- -->
+    <article class="content-section" id="certifications" style="display: none;">
+       <div class="certifications-container">
+           <div class="certification-item">
+               <a href="https://www.freecodecamp.org/certification/ArianDK/responsive-web-design" target="_blank">
+               <img src="assets/images/responsive-web-design-certification.PNG" alt="Certification" class="certification-img">
+           </a>
+           </div>
+       </div>
+    </article>
         <!-- -------------- CONTACT BOX ---------------- -->
         <section class="section" id="contact">
             <div class="top-header">
