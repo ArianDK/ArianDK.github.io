@@ -283,7 +283,7 @@ nav{
 }
 .row{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
     gap: 50px;
 }
@@ -313,6 +313,7 @@ h3{
 }
 
 /* ----- ABOUT INFO ----- */
+
 .about-info{
     position: relative;
     display: flex;
@@ -325,6 +326,7 @@ h3{
     box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
     border-radius: 20px;
 }
+
 .about-info p{
     text-align: center;
     font-size: 15px;
@@ -529,9 +531,14 @@ textarea{
     transition: transform 0.3s;
 }
 
-.certification-img:hover {
-    transform: scale(1.05);
+/* effect will only work on desktops/laptops and not on phones or tablets */
+@media (hover: hover) and (pointer: fine) {
+    .certification-img:hover {
+        transform: scale(1.05);
+    }
+
 }
+
 /* ----- FOOTER BOX ----- */
 footer{
     display: flex;
