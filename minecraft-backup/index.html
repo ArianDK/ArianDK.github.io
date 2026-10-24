@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Minecraft Backup · Arian Din-Kirkebo</title>
+  <meta name="description" content="Information about Arian Din-Kirkebo's private Minecraft world backup integration with Google Drive.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <p class="eyebrow">Personal utility · Arian Din-Kirkebo</p>
+    <h1>Minecraft Backup</h1>
+    <p>This is a personal backup utility for a Minecraft server on my Raspberry Pi. It makes a dated archive of the world when nobody is playing and uploads at most one backup per day to my Google Drive folder <code>sync/minecraft</code>. The upload runs after the game resumes.</p>
+    <p>The utility uses open-source <strong>rclone</strong> to access Google Drive. It is not a public backup service, and visitors cannot create accounts or upload files here. No world archives, sign-in tokens, or server credentials are hosted on this website.</p>
+    <h2>Google Drive access</h2>
+    <p>To work with a folder I created in advance, the Google authorization allows broad Drive access. The backup job is configured to find only the chosen folder, upload a world archive there, and check that the upload matches. I can revoke the authorization through my Google Account.</p>
+    <nav aria-label="App information">
+      <a href="privacy.html">Privacy policy</a>
+      <a href="terms.html">Terms of use</a>
+    </nav>
+    <p class="contact">Questions: <a href="mailto:ariandk05@gmail.com">ariandk05@gmail.com</a></p>
+  </main>
+</body>
+</html>

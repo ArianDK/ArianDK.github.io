@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy policy · Minecraft Backup</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <p class="eyebrow">Minecraft Backup</p>
+    <h1>Privacy policy</h1>
+    <p>Last updated October 24, 2026. This utility is for the owner's personal Minecraft server; it is not offered to other users.</p>
+    <h2>Google data and permissions</h2>
+    <p>OAuth authorization gives rclone broad access to the owner's Google Drive because the target <code>sync/minecraft</code> folder was created before the app. The scheduled script uses Drive only to identify that folder, upload dated Minecraft world archives, and verify uploads. It does not download unrelated Drive files, sell data, use Google data for advertising, or share Drive data with other people.</p>
+    <h2>Storage and retention</h2>
+    <p>The OAuth token is stored privately on the owner's Raspberry Pi. World archives are uploaded to the owner's Google Drive, not to this website. A failed upload may leave an archive on the Pi for retry; after a verified upload, the temporary Pi copy is removed. Older Drive backups remain until the owner removes them. Server logs record backup results and errors.</p>
+    <h2>Access and control</h2>
+    <p>Only the owner administers this utility and its Drive folder. The owner may inspect or delete backups in Google Drive and revoke access at any time in Google Account permissions; revoking access stops future uploads until authorization is restored. The public pages contain no Minecraft world data or credentials.</p>
+    <p>For privacy questions, email <a href="mailto:ariandk05@gmail.com">ariandk05@gmail.com</a>.</p>
+    <nav aria-label="App information"><a href="index.html">Overview</a><a href="terms.html">Terms of use</a></nav>
+  </main>
+</body>
+</html>
